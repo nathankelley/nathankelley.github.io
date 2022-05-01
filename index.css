@@ -1,0 +1,38 @@
+body {
+    margin: auto;
+}
+
+html {
+    background-color: whitesmoke;
+}
+
+h1 {
+    background-color: whitesmoke;
+    margin: 50;
+    padding: 20 20 20 50;
+    font-size: 2.25em;
+}
+
+
+/* List Design */
+.list {
+    margin: 50;
+    padding: 20 20 20 50;
+    font-size: 1.25em;
+}
+li {
+    padding: 3;
+}
+
+
+/* Link design */
+a:link {
+    text-decoration: none;
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: blue;
+}
