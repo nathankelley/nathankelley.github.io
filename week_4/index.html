@@ -27,7 +27,23 @@
     blur - focus is moved away
     change - change value inside input box
     
+    Getting form values
+    - make sure to use ` `
+    - example: alert(`You Searched for: ${input.value}`)
+    - set automatic value using .value too, use focus and blur events to take out when user attempts to put in their own text
+    - You can also use 'placeholder' in HTML instead of focus and blur, different behavior
 
+    Form elements
+    autofocus - new in HTML5, gives focus to element when page loads
+    (JSON.stringify() - allow object to turn to string)
+
+    Input Fields
+    Types: text, password, checkbox, radio, file, etc.
+
+    checkbox - use for loop to iterate over boxes to see if they've been checked or not
+            - use form.formName.length to get length of checklist
+
+    
 -->
 
 <!doctype html>
@@ -50,6 +66,66 @@
         </form>
 
         <div id="output"></div>
+
+        <h2>Create a superhero:</h2>
+        <form id='hero'>
+            <label for='heroName'>Name:
+                <input type='text' id='heroName' name='heroName' autofocus placeholder='Your Super Hero Name' maxlength=32 required>
+            </label>
+            <label for='realName'>Real Name:
+                <input type='password' name='realName' id='realName'>
+            </label>
+            
+            <h3>Super Powers:</h3>
+            <label for='flight'>Flight:
+                <input type='checkbox' id='flight' value='Flight' name='powers'>
+            </label>
+            <label for='strength'>Super Strength:
+                <input type='checkbox' id='strength' value='Strength' name='powers'>
+            </label>
+            <label for='speed'>Super Speed:
+                <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+            </label>
+            <label for='energy'>Energy Blasts:
+                <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+            </label>
+            <label for='telekinesis'>Telekinesis:
+                <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+            </label>
+
+            <h3>What type of hero are you?</h3>
+            <label for='hero'>Hero:
+                <input type='radio' name='category' value='Hero' id='hero'>
+            </label>
+            <label for='villain'>Villain:
+                <input type='radio' name='category' value='Villain' id='villain'>
+            </label>
+            <label for='anti-hero'>Anti-Hero:
+                <input type='radio' name='category' value='Antihero' id='anti-hero'>
+            </label>
+
+            <br><br>
+            <label for='City'><strong>Base of Operations:</strong>
+                <select name='city' id='city'>
+                    <option value='' selected>Choose a City</option>
+                    <option value='Metropolis'>Metropolis</option>
+                    <option value='Gotham City'>Gotham City</option>
+                    <option value='Keystone City'>Keystone City</option>
+                    <option value='Coast City'>Coast City</option>
+                    <option value='Star City'>Star City</option>
+                </select>
+            </label>
+
+            <br><br>
+            <label for='origin'><strong>Origin Story:</strong><br>
+                <textarea id='origin' name='origin' rows='20' cols='60'>
+                    Example: Born as Kal-El on the planet Krypton...
+                </textarea>
+            </label>
+
+            <!--<button type='reset'>Reset</button> Here but no one likes -->
+            <button type='submit'>Submit</button>
+        </form>
 
         <script src="/week_4/main.js"></script>
     </body>
