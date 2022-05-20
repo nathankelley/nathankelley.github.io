@@ -1,0 +1,128 @@
+<!--
+    - NOTES -
+    
+    Debugging
+
+    Error Objects: created to handle exceptions that occur, some built-in
+    RangeError - number outside of range of values
+    ReferenceError - reference to an item doesn't exist
+    SyntaxError - speaks for itself
+    TypeError - data type issue somewhere
+    URIError - problem with encoding or decoding the URI(What does that mean?)
+    InternalError - error in JavaScript engine, could be too much recursion
+
+    - errors (including these) can be used to create custom error objects
+    - All of these have properties
+        ErrorType(name, message, stack)
+        > name will return name of error constructor as a string
+        > message returns a description of the error, provided as argument
+        > stack will return a stack trace
+
+    Throw: use to throw errors, you can make custom but preferable to use built-in error functions which can be caught in a 'catch' block
+
+    ex: throw new Error('Something has gone badly wrong!');
+
+    Finally: added after catch block, will run no matter what (maybe you want code to run whether an error is thrown or not)
+
+    Testing
+    - often overlooked; "good tests means your code will be less brittle as it develops, and any errors will be identified early on."
+    
+    Test-driven Development (TDD)
+    1. Write tests (that initially fail)
+    2. Write code to pass the tests
+    3. Refactor the code
+    4. Test refactored code
+    5. Write more tests for new features
+    - Follow this process in small chunks. 
+    - considered best practice, but sometimes hard to implement
+    - do it, but don't worry about it if your tests or implementation isn't what you expect it to be
+
+    Jest
+    - TDD framework created by Facebook (downloaded)
+
+-->
+
+<!doctype html>
+<html lang='en-us'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Week 5 Notes and Practice</title>
+    </head>
+    
+    <body>
+        <header>
+            <h1>Week 5 Practice</h1>
+        </header>
+
+        <p>
+            This program is similar to last week, but includes error handling, uses strict, and throws exceptions.<br><br>
+        </p>
+        
+        <p>Click in and out of the input box! Try adding text! Submit when you want!</p>
+
+        <form name='search' action='/search'>
+            <input name='searchInput'>
+            <button type='submit'>Search</button>
+        </form>
+
+        <div id="output"></div>
+
+        <h2>Coke or Pepsi?</h2>
+        <form id='hero'>
+            <label for='heroName'>Name:
+                <input type='text' id='name' name='name' autofocus placeholder='Your Name' maxlength=32 required>
+            </label>
+            
+            <h3>Super Powers:</h3>
+            <label for='flight'>Flight:
+                <input type='checkbox' id='flight' value='Flight' name='powers'>
+            </label>
+            <label for='strength'>Super Strength:
+                <input type='checkbox' id='strength' value='Strength' name='powers'>
+            </label>
+            <label for='speed'>Super Speed:
+                <input type='checkbox' id='speed' value='Super Speed' name='powers'>
+            </label>
+            <label for='energy'>Energy Blasts:
+                <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
+            </label>
+            <label for='telekinesis'>Telekinesis:
+                <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+            </label>
+
+            <h3>What type of hero are you?</h3>
+            <label for='hero'>Hero:
+                <input type='radio' name='category' value='Hero' id='hero'>
+            </label>
+            <label for='villain'>Villain:
+                <input type='radio' name='category' value='Villain' id='villain'>
+            </label>
+            <label for='anti-hero'>Anti-Hero:
+                <input type='radio' name='category' value='Antihero' id='anti-hero'>
+            </label>
+
+            <br><br>
+            <label for='City'><strong>Base of Operations:</strong>
+                <select name='city' id='city'>
+                    <option value='' selected>Choose a City</option>
+                    <option value='Metropolis'>Metropolis</option>
+                    <option value='Gotham City'>Gotham City</option>
+                    <option value='Keystone City'>Keystone City</option>
+                    <option value='Coast City'>Coast City</option>
+                    <option value='Star City'>Star City</option>
+                </select>
+            </label>
+
+            <br><br>
+            <label for='origin'><strong>Origin Story:</strong><br>
+                <textarea id='origin' name='origin' rows='20' cols='60'>
+                    Example: Born as Kal-El on the planet Krypton...
+                </textarea>
+            </label>
+
+            <button type='submit'>Submit</button>
+        </form>
+        
+        <script src="/week_5/main.js"></script>
+    </body>
+</html>
