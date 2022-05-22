@@ -58,65 +58,49 @@
             This program is similar to last week, but includes error handling, uses strict, and throws exceptions.<br><br>
         </p>
         
+        <!--
         <p>Click in and out of the input box! Try adding text! Submit when you want!</p>
 
+        
         <form name='search' action='/search'>
             <input name='searchInput'>
             <button type='submit'>Search</button>
         </form>
+        -->
 
         <div id="output"></div>
 
         <h2>Coke or Pepsi?</h2>
-        <form id='hero'>
-            <label for='heroName'>Name:
-                <input type='text' id='name' name='name' autofocus placeholder='Your Name' maxlength=32 required>
-            </label>
-            
-            <h3>Super Powers:</h3>
-            <label for='flight'>Flight:
-                <input type='checkbox' id='flight' value='Flight' name='powers'>
-            </label>
-            <label for='strength'>Super Strength:
-                <input type='checkbox' id='strength' value='Strength' name='powers'>
-            </label>
-            <label for='speed'>Super Speed:
-                <input type='checkbox' id='speed' value='Super Speed' name='powers'>
-            </label>
-            <label for='energy'>Energy Blasts:
-                <input type='checkbox' id='energy' value='Energy Blasts' name='powers'>
-            </label>
-            <label for='telekinesis'>Telekinesis:
-                <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
+        <form id='user'>
+            <label for='userName'>Name:
+                <input type='text' id='userName' name='userName' autofocus placeholder='Your Name' maxlength=32 required><br><br>
             </label>
 
-            <h3>What type of hero are you?</h3>
-            <label for='hero'>Hero:
-                <input type='radio' name='category' value='Hero' id='hero'>
+            
+            <label for='coke'>Coke:
+                <input type='radio' name='category' value='Coke' id='coke'>
             </label>
-            <label for='villain'>Villain:
-                <input type='radio' name='category' value='Villain' id='villain'>
+            <label for='pepsi'>Pepsi:
+                <input type='radio' name='category' value='Pepsi' id='pepsi'>
             </label>
-            <label for='anti-hero'>Anti-Hero:
-                <input type='radio' name='category' value='Antihero' id='anti-hero'>
-            </label>
+
 
             <br><br>
-            <label for='City'><strong>Base of Operations:</strong>
-                <select name='city' id='city'>
-                    <option value='' selected>Choose a City</option>
-                    <option value='Metropolis'>Metropolis</option>
-                    <option value='Gotham City'>Gotham City</option>
-                    <option value='Keystone City'>Keystone City</option>
-                    <option value='Coast City'>Coast City</option>
-                    <option value='Star City'>Star City</option>
+            <label for='choice'><strong>Why did you choose Coke?</strong>
+                <select name='choice' id='choice'>
+                    <option value=''>Choose</option>
+                    <option value="Because it's the best, duh">Because it's the best, duh
+                    </option>
+                    <option value='Because Pepsi sucks!'>Because Pepsi sucks!</option>
+                    <option value='It was my only option'>It was my only option
+                    </option>
                 </select>
             </label>
 
             <br><br>
-            <label for='origin'><strong>Origin Story:</strong><br>
+            <label for='origin'><strong>Explain why you love Coke so much:</strong><br>
                 <textarea id='origin' name='origin' rows='20' cols='60'>
-                    Example: Born as Kal-El on the planet Krypton...
+                    Coke is the bomb.com. I just can't live without it. Mt. Dew is a pretty close second though. I think it'd do in a pinch. Also it's no coincidence that 'Pepsi' and 'blasphemy' rhyme.
                 </textarea>
             </label>
 

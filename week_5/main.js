@@ -1,7 +1,7 @@
 // ACCESS FORM
 // using name attribute to get form
 const form = document.forms['search']; // this is the better way
-
+/*
 // ACCESS FORM ELEMENTS
 // using elements method to access form 
 // const [input,button] = form.elements;
@@ -36,43 +36,37 @@ input.addEventListener('blur', function(){
         input.value = 'Submit Here';
     } 
 }, false);
-
-
+*/
 
 // FOR SUPERHERO FORM
-const form_2 = document.forms['hero'];
+const form_2 = document.forms['user'];
 form_2.addEventListener('submit', makeHero, false);
 
 // create hero object
 function makeHero(event) {
     // debugger;
     event.preventDefault();
-    const hero = {};
-    hero.name = form_2.name.value;
-
-    // get hero powers
-    hero.powers = [];
-    for (let i = 0; i < form_2.powers.length; i++) {
-        if (form_2.powers[i].checked){
-            hero.powers.push(form_2.powers[i].value);
-            }
-    }
-
-    // get hero type
-    hero.category = form_2.category.value;
+    const user = {};
+    user.userName = form_2.userName.value;
 
     // get base of operations
-    hero.city = form_2.city.value;
+    let errorPepsi = "Pepsi";
+    if (form_2.category.value == "Pepsi") {
+        alert("Invalid entry. Please try again.");
+    } else {
+        user.category = form_2.category.value;
+    }
+    
 
     // get origin story
-    hero.origin = form_2.origin.value;
+    user.choice = form_2.choice.value;
 
     // this method in JSON will convert hero object to string to display
-    alert(JSON.stringify(hero)); 
-    return hero;
+    alert(`You submitted: \n${JSON.stringify(user)}`);
+    return user;
 }
 
-
+/*
 // error handler
 // this uses the builtin Error function and a catch block
 function imaginarySquareRoot(number) {
@@ -86,3 +80,4 @@ function imaginarySquareRoot(number) {
         return `+ or - ${answer}`;
     }
 }
+*/
