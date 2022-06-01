@@ -1,0 +1,10 @@
+body {
+    margin: auto;
+    width: 50%;
+}
+
+.new-todo-button {
+    background-color: #56C7F0;
+    color: white;
+    border: none;
+}
