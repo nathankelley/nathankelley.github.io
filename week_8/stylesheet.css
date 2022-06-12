@@ -1,0 +1,46 @@
+body {
+    margin: auto;
+    width: 50%;
+}
+
+main, header, footer{
+    text-align: center;
+}
+
+.transform-1:hover {
+    transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+}
+
+.transform-1:hover span {
+    
+    color: #484848;  
+    transform: rotate(50deg) translateY(30px) scale(1.5) skew(15deg, 4deg);
+    transform-origin: 0 0;
+    display: inline-block;
+    color: red;
+}
+
+.transform-2:hover span {
+    color: #484848;  
+    transform: translateY(30px) rotate(50deg) scale(1.5) skew(15deg, 4deg);
+    transform-origin: 0 0;
+    display: inline-block;
+    color: red;
+}
+
+@keyframes moveRight { 
+    from {
+    transform: translateX(-50%);
+    }
+    to {
+    transform: translateX(50%);
+    }
+}
+
+.myCanvas {
+    border: dotted 2px black;
+}
+
+.draganddrop .mc {
+    text-align: center; 
+}
