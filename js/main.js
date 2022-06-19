@@ -6,7 +6,8 @@ const links = [
     {label: "Week 5", url: "week_5/index.html"},
     {label: "Week 6", url: "ToDoApplication/index.html"},
     {label: "Week 7", url: "week_7/index.html"},
-    {label: "Week 8", url: "week_8/index.html"}
+    {label: "Week 8", url: "week_8/index.html"},
+    {label: "Week 9", url: "week_9/index.html"}
 ];
 
 function addList(){
