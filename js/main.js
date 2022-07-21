@@ -14,7 +14,7 @@ const links = [
 function addList(){
     const theList = document.getElementById("link-list");
 
-    for  (link in links){
+    for  (let link in links){
         theList.innerHTML += "<li><a href = " + links[link].url + ">" + links[link].label + "</a></li>";
     }
     
