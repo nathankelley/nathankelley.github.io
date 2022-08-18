@@ -62,8 +62,21 @@ function buildBossRater(bosses){
     const name = document.getElementById("boss-name-rater");
     name.innerHTML = randomBoss.name;
 
-
     const ratings = document.getElementById("ratings");
-    //ratings.innerHTML = 
+    
     
 }
+
+
+// handle submit button for ratings
+function handleSubmit(event) {
+    event.preventDefault();
+
+    const data = new FormData(event.target);
+
+    const value = Object.fromEntries(data.entries());
+
+    console.log({ value });
+}
+const ratingsForm = document.querySelector('form');
+ratingsForm.addEventListener('submit', handleSubmit);
